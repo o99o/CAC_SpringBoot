@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zit.cac.dao.LogDao">
+
+	<insert id="insertLog" parameterType="log">
+		insert into log(userName,createTime,content,operation,ip,module) 
+		values (#{userName},#{createTime},#{content},#{operation},#{ip},#{module});
+	</insert>
+	
+	<select id="findLog" parameterType="log" resultType="log">
+		select logId,userName,createTime,operation,ip,module,content from log where 1 = 1
+		<if test="userName != null and '' != userName"> 
+			<bind name="pattern_userName" value="'%'+userName+'%'"/> 
+            <![CDATA[  
+              AND userName like #{pattern_userName}  
+            ]]>  
+        </if>
+        <if test="operation != null and '' != operation">  
+        	<bind name="pattern_operation" value="'%'+operation+'%'"/> 
+            <![CDATA[  
+              AND operation like #{pattern_operation}  
+            ]]>  
+        </if>
+        <if test="module != null and '' != module">  
+       	    <bind name="pattern_module" value="'%'+module+'%'"/>
+            <![CDATA[  
+              AND module like #{pattern_module} 
+            ]]>  
+        </if>
+        <if test="start != null and '' != start">
+        	<![CDATA[
+        		AND createTime >= #{start}
+        	]]>
+        </if>
+        <if test="end != null and '' != end">
+        	<![CDATA[
+        		AND createTime <= #{end}
+        	]]>
+        </if>
+        ORDER BY logId DESC 
+	</select>
+
+
+	<select id="countLog" parameterType="log" resultType="int">
+		select count(*) from log where 1 = 1
+		<if test="userName != null and '' != userName">  
+			<bind name="pattern_userName" value="'%'+userName+'%'"/>
+            <![CDATA[  
+              AND userName like #{pattern_userName}  
+            ]]>  
+        </if>
+        <if test="operation != null and '' != operation"> 
+        	<bind name="pattern_operation" value="'%'+operation+'%'"/> 
+            <![CDATA[  
+              AND operation like #{pattern_operation}  
+            ]]>  
+        </if>
+        <if test="module != null and '' != module">  
+        	<bind name="pattern_module" value="'%'+module+'%'"/>
+            <![CDATA[  
+              AND module like #{pattern_module}  
+            ]]>  
+        </if>
+        <if test="start != null and '' != start">
+        	<![CDATA[
+        		AND createTime >= #{start}
+        	]]>
+        </if>
+        <if test="end != null and '' != end">
+        	<![CDATA[
+        		AND createTime <= #{end}
+        	]]>
+        </if>
+	</select>
+
+	<delete id="deleteLog" parameterType="Long">
+		delete from log where logId = #{logId}
+	</delete>
+	
+	<delete id="truncateLog">
+        <![CDATA[
+        	truncate table log
+        ]]>
+    </delete>
+	
+	
+</mapper>

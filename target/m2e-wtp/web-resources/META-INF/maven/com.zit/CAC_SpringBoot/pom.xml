@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.zit</groupId>
+	<artifactId>CAC_SpringBoot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.3.RELEASE</version>
+		<relativePath/> 
+	</parent>
+	
+	<properties>
+		<!-- jedis -->
+		<jedis.version>2.7.0</jedis.version>
+		<mybatis-spring-boot.version>1.3.2</mybatis-spring-boot.version>
+		<!-- pagehelper -->
+		<pagehelper.version>1.2.5</pagehelper.version>
+		<!-- javaee-api -->
+		<javaee-api.version>7.0</javaee-api.version>
+		<!-- druid -->
+		<druid.version>1.1.10</druid.version>
+		<!-- jstl -->
+		<jstl.version>1.2</jstl.version>
+		<!-- fastjson -->
+		<fastjson.version>1.2.5</fastjson.version>
+		<!-- commons-fileupload -->
+		<commons-fileupload.version>1.3.1</commons-fileupload.version>
+		<!-- commons-io -->
+		<commons-io.version>2.4</commons-io.version>
+		<!-- poi -->
+		<poi.version>3.12</poi.version>
+		<!-- commons-lang3 -->
+		<commons-lang3.version>3.0</commons-lang3.version>
+		<!-- xbean-spring -->
+		<xbean-spring.version>4.0</xbean-spring.version>
+		<!-- axis2 -->
+		<axis2.version>1.7.8</axis2.version>
+		<!-- xmlbeans.version -->
+		<xmlbeans.version>2.6.0</xmlbeans.version>
+		<!-- orika.version -->
+		<orika.version>1.4.6</orika.version>
+		<!--spring-integration-kafka  -->
+		<spring-integration-kafka.version>1.3.0.RELEASE</spring-integration-kafka.version>
+		<!-- cglib -->
+		<cglib.version>2.1</cglib.version>
+	</properties>
+	
+	<dependencies>
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <exclusions>
+        	<exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-logging</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+    <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+         <scope>test</scope>
+    </dependency>
+       
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <!-- 去掉部分自带依赖-->
+        <exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <!-- 引入log4j2依赖 -->
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+	   <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+    <!-- 加上这个才能辨认到log4j2.yml文件 -->
+    <dependency>
+		<groupId>com.fasterxml.jackson.dataformat</groupId>
+		<artifactId>jackson-dataformat-yaml</artifactId>
+	</dependency>
+
+    <!-- Spring额外添加依赖 -->
+    <dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-websocket</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aop</artifactId>
+	</dependency>
+	<!-- aop -->
+	<dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <!-- AspectJ -->
+    <dependency>
+         <groupId>org.aspectj</groupId>
+         <artifactId>aspectjrt</artifactId>
+    </dependency>
+    <dependency>
+         <groupId>org.aspectj</groupId>
+         <artifactId>aspectjweaver</artifactId>
+    </dependency>
+    <dependency>
+         <groupId>cglib</groupId>
+         <artifactId>cglib</artifactId>
+         <version>${cglib.version}</version>
+    </dependency>
+    
+    <!-- tomcat容器部署 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis-spring-boot.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency>
+  
+    <!-- 支持 @ConfigurationProperties 注解 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-configuration-processor</artifactId>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-jasper</artifactId>
+    </dependency>
+       
+
+	<!-- mybatis分页 -->
+	<dependency>
+           <groupId>com.github.pagehelper</groupId>
+           <artifactId>pagehelper-spring-boot-starter</artifactId>
+           <version>${pagehelper.version}</version>
+       </dependency>
+	
+	<!-- 导入java ee jar 包 -->
+	<dependency>
+		<groupId>javax</groupId>
+		<artifactId>javaee-api</artifactId>
+		<version>${javaee-api.version}</version>
+	</dependency>
+	
+	<!-- druid 实现数据库连接 -->
+	<dependency>
+           <groupId>com.alibaba</groupId>
+           <artifactId>druid-spring-boot-starter</artifactId>
+           <version>${druid.version}</version>
+       </dependency>
+       
+	<dependency>
+           <groupId>mysql</groupId>
+           <artifactId>mysql-connector-java</artifactId>
+           <scope>runtime</scope>
+       </dependency>
+	
+	<!-- JSTL标签类 -->
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>
+	
+	<!-- 格式化对象，方便输出日志 -->
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>${fastjson.version}</version>
+	</dependency>
+
+	<!-- 上传组件包 -->
+	<dependency>
+		<groupId>commons-fileupload</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>${commons-fileupload.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>commons-io</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>${commons-io.version}</version>
+	</dependency>
+	
+	<!-- POI支持 -->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<version>${poi.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang3</artifactId>
+	</dependency>
+	
+	<!--orika bean复制 -->
+	<dependency>
+		<groupId>ma.glasnost.orika</groupId>
+		<artifactId>orika-core</artifactId>
+		<version>${orika.version}</version>
+	</dependency>
+	
+	<!-- redis客户端 -->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	</dependency>
+	<dependency>
+        <groupId>org.springframework.data</groupId>
+        <artifactId>spring-data-redis</artifactId>
+    </dependency>
+	
+    <!-- spring-kafka -->
+    <dependency>
+		<groupId>org.springframework.integration</groupId>
+		<artifactId>spring-integration-kafka</artifactId>
+		<version>${spring-integration-kafka.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.kafka</groupId>
+		<artifactId>kafka-clients</artifactId>
+	</dependency>
+    <dependency>
+		<groupId>org.springframework.kafka</groupId>
+		<artifactId>spring-kafka</artifactId>
+	</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+		    <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <configuration>
+		            <source>1.7</source>
+		            <target>1.7</target>
+		        </configuration>
+		    </plugin>
+		    <plugin>
+		        <groupId>org.springframework.boot</groupId>
+		        <artifactId>spring-boot-maven-plugin</artifactId>
+		        <version>1.5.9.RELEASE</version>
+		        <executions>
+		            <execution>
+		                <goals>
+		                    <goal>repackage</goal>
+		                </goals>
+		            </execution>
+		        </executions>
+		    </plugin>
+		</plugins>
+	</build>
+	
+</project>

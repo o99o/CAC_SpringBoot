@@ -1,0 +1,203 @@
+body
+{
+	font-size: 12px;
+	color: #999999;
+	font-family: Tahoma,Verdana;
+}
+ul
+{
+	position:relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	top:30px;
+}
+.Main
+{
+	float:left;
+	position:relative;
+ 	width:100%;
+	height:100%; 
+	display:block;
+	background:url(../images/login/cac_login.png) no-repeat;
+ 	background-size:100% 79%;
+}
+.topD
+{
+	width: 318px;
+	height: 174px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	left:535px;
+	top:-15px;
+} 
+.middle_C
+{
+	width: 318px;
+	height: 50px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	left: 380px;
+	top:-44px;
+	
+}
+.login
+{
+	
+}
+#submit{
+	display:inline-block;
+	width:116px;
+	height:45px;
+	border:#03b6fd 0px solid; /*ȥ�߿�*/
+	background:url(../images/login/kvn_loginButton1.png) no-repeat;
+  	background-size:116px 45px;
+    color:#FFFFFF; 
+    font-family:"΢���ź� Regular", "΢���ź�", "����", "Tahoma", "Verdana", "Arial","Helvetica", "sans-serif"; 
+    font-size: 20px;
+    position: relative;
+    font-weight:bold;
+    behavior: url(../config/pie.htc);
+}
+#submit:hover{
+	background:url(../images/login/kvn_loginButton2.png) no-repeat;
+	background-size:116px 45px;
+}
+#reset{
+	display:inline-block;
+	width:116px;
+	height:45px;
+	border:#03b6fd 0px solid; /*ȥ�߿�*/
+	background:url(../images/login/kvn_loginButton1.png) no-repeat;
+  	background-size:116px 45px;
+    color:#FFFFFF; 
+    font-family:"΢���ź� Regular", "΢���ź�", "����", "Tahoma", "Verdana", "Arial","Helvetica", "sans-serif"; 
+    font-size: 20px;
+    position: absolute;
+    left:600px;
+    top:160px;
+    font-weight:bold;
+    z-index:1000;
+    behavior: url(../config/pie.htc);
+}
+#reset:hover{
+	background:url(../images/login/kvn_loginButton2.png) no-repeat;
+	background-size:116px 45px;
+}
+#errorInfo{
+	position: relative;
+	left:738px;
+	top:-46px;
+}
+.login li
+{
+	
+}
+#userName{
+	z-index:9; 
+	border: 1px solid  #282828;
+	width: 266px; 
+	height: 40px;
+	line-height: 32px;
+	border-radius: 25px; 
+	padding-left: 16px;
+	font-size: 16px; 
+	color: #000000; 
+	background: #FFFFFF; 
+	position: absolute; 
+	outline: medium; 
+	maxLength: 60;
+	top:-28px;
+	behavior: url(../config/pie.htc);
+}
+#password{
+	z-index:9; 
+	border: 1px solid #282828 ;
+	width:266px;
+	height:40px;
+	line-height: 32px;
+	border-radius:25px;
+	padding-left:16px;
+	font-size:16px;
+	color:#000000;
+	background:#FFFFFF;
+	position:absolute;
+	outline:medium;
+	maxLength:60;
+	top:33px;
+	behavior: url(../config/pie.htc);
+}
+#userType{
+	z-index:9; 
+	border: 1px solid  #282828;
+	width: 266px; 
+	height: 36px;
+	line-height: 32px;
+	border-radius: 25px; 
+	padding-left: 16px;
+	font-size: 16px; 
+	color: #000000; 
+	background: #FFFFFF; 
+	position: absolute; 
+	outline: medium; 
+	maxLength: 60;
+	top:80px;
+	behavior: url(../config/pie.htc);
+}
+.left
+{ 
+	line-height: 35px;
+	vertical-align: middle;
+	width: 50px;
+	height:34px;
+	text-align: right;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding-bottom:3px;
+}
+
+.txt
+{
+	width: 215px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	border: 0px;
+	padding-left: 3px;
+	color: #999999;
+	background: url(../images/login/txt.gif) no-repeat left center;
+}
+
+.txtCode
+{	
+	z-index:9; 
+	border: 1px solid #282828 ;
+	width:156px;
+	height:34px;
+	line-height: 34px;
+	border-radius:25px;
+	padding-left:16px;
+	font-size:16px;
+	color:#000000;
+	background:#FFFFFF;
+	position:absolute;
+	outline:medium;
+	maxLength:60;
+	top:83px;
+}
+#randImage{
+	position:absolute;
+	top:85px;
+	left: 170px;
+}
+#changeValidPicture{
+	position:absolute;
+	top:90px;
+	left: 240px;
+}
+.btn
+{
+	margin-left:75px;
+}

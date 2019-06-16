@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zit.cac.dao.TokenDao">
+	
+	<insert id="insertToken" parameterType="token">
+		insert into token(userId,userAgent,token,createTime,expireTime) 
+		values (#{userId},#{userAgent},#{token},#{createTime},#{expireTime});
+	</insert>
+	
+	<select id="findOneToken" parameterType="java.util.Map" resultType="token">
+		select tokenId,userId,userAgent,token,createTime,expireTime from token
+		where token = #{token} and expireTime >= #{expireTime} order by tokenId desc
+	</select>
+	
+</mapper>

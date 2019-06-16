@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zit.cac.dao.UserDao">
+	
+	<!-- 公共sql -->
+	<sql id="userFields">
+	    userId,userName,password,userType,userDescription
+	</sql>
+	
+	<select id="findUser" parameterType="user" resultType="user">
+		select <include refid="userFields"/>,u.roleId,r.roleName
+		from user u left join role r on u.roleId = r.roleId where 1 = 1
+		<if test="userName != null and '' != userName">  
+			<bind name="pattern_userName" value="'%'+userName+'%'"/>
+            <![CDATA[  
+              AND userName like #{pattern_userName}  
+            ]]>  
+        </if>
+        <if test="roleId!=null and roleId!=-1">  
+            <![CDATA[  
+              AND u.roleId = #{roleId}   
+            ]]>  
+        </if>
+	</select>
+
+
+	<select id="countUser" parameterType="user" resultType="int">
+		SELECT count(*) FROM `user` u LEFT JOIN role r on u.roleId = r.roleId
+		<where>
+			<if test="userName != null and '' != userName">
+				<bind name="pattern_userName" value="'%'+userName+'%'" />
+	            <![CDATA[  
+	              AND userName like #{pattern_userName}  
+	            ]]>
+			</if>
+			<if test="roleId!=null and roleId!=-1">  
+	            <![CDATA[  
+	              AND u.roleId = #{roleId}   
+	            ]]>
+			</if>
+		</where>
+	</select>
+	
+	<select id="findOneUser" parameterType="Long" resultType="user">
+		SELECT userId,userName,password,userType,roleId,userDescription FROM `user`
+		WHERE userId=#{userId}
+	</select>
+	
+	<select id="findOneUserAndRole" parameterType="Long" resultType="user">
+		SELECT u.userId,u.userName,u.password,u.userType,u.roleId,u.userDescription,r.roleName
+		FROM `user` u LEFT JOIN role r on u.roleId = r.roleId
+		WHERE userId=#{userId}
+	</select>
+	
+	<insert id="addUser" parameterType="user" >
+		INSERT `user`(userName,password,userType,roleId,userDescription) 
+		VALUES (#{userName},#{password},2,#{roleId},#{userDescription})
+	</insert>
+	
+	<update id="updateUser" parameterType="user">
+		UPDATE `user` SET
+		<trim suffixOverrides=",">
+			<if test="userName!=null">userName=#{userName},</if>
+			<if test="password!=null">password=#{password},</if>
+			<if test="userType!=null">userType=#{userType},</if>
+			<if test="roleId!=null">roleId=#{roleId},</if>
+			<if test="userDescription!=null">userDescription=#{userDescription},</if>
+		</trim>
+		<where>userId=#{userId}</where>
+	</update>
+	
+	
+	<delete id="deleteUser" parameterType="Long">
+		delete from user 
+		<where>userId=#{userId}</where>
+	</delete>
+	
+	<select id="loginUser" parameterType="Map" resultType="user">
+		select userId,userName,password,userType,roleId,userDescription from user
+		where userName=#{userName} and password=#{password}
+	</select>
+	
+	
+	<select id="existUserWithUserName" parameterType="String" resultType="user">
+		select userId,userName,password,userType,roleId,userDescription from user
+		where userName=#{userName}
+	</select>
+	
+	
+	<select id="existUserWithRoleId" parameterType="Long" resultType="user">
+		select userId,userName,password,userType,roleId,userDescription from user
+		where roleId=#{roleId}
+	</select>
+	
+</mapper>

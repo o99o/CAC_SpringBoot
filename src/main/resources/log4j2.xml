@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 设置log4j2的自身log级别为warn -->
+<!-- OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+<Configuration status="WARN">
+    <Appenders>
+        <!-- 控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        
+        <RollingFile name="RollingFileDebug" fileName="D:/logs/debug.log"
+            filePattern="D:/logs/$${date:yyyy-MM}/debug-%d{yyyy-MM-dd}-%i.log">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->        
+            <Filters>
+                <ThresholdFilter level="DEBUG"/>
+                <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" min="3" />  
+        </RollingFile>
+    
+        <RollingFile name="RollingFileInfo" fileName="D:/logs/info.log"
+            filePattern="D:/logs/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log">      
+            <Filters>
+                <ThresholdFilter level="INFO"/>
+                <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" min="3" />  
+        </RollingFile>
+ 
+        <RollingFile name="RollingFileWarn" fileName="D:/logs/warn.log"
+            filePattern="D:/logs/$${date:yyyy-MM}/warn-%d{yyyy-MM-dd}-%i.log">
+            <Filters>
+                <ThresholdFilter level="WARN"/>
+                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" min="3" />  
+        </RollingFile>
+ 
+        <RollingFile name="RollingFileError" fileName="D:/logs/error.log"
+            filePattern="D:/logs/$${date:yyyy-MM}/error-%d{yyyy-MM-dd}-%i.log">
+            <ThresholdFilter level="ERROR"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" min="3" />  
+        </RollingFile>
+        
+        <RollingFile name="RollingFileFatal" fileName="D:/logs/fatal.log"
+            filePattern="D:/logs/$${date:yyyy-MM}/fatal-%d{yyyy-MM-dd}-%i.log">
+            <ThresholdFilter level="FATAL"/>
+            <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <!--最多保留20个日志文件-->
+            <DefaultRolloverStrategy max="20" min="3" />  
+        </RollingFile>
+        <!--druid的日志记录追加器-->        
+        <RollingFile name="druidSqlRollingFile" fileName="D:/logs/druid-sql.log" 
+        filePattern="logs/$${date:yyyy-MM}/api-%d{yyyy-MM-dd}-%i.log.gz">            
+	        <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss}] %-5level %L %M - %msg%xEx%n"/>            
+	        <Policies>                <SizeBasedTriggeringPolicy size="500 MB"/>                
+	        <TimeBasedTriggeringPolicy/>            
+	        </Policies>        
+        </RollingFile>
+    </Appenders>
+    
+    <Loggers>
+         <!--过滤掉simm.spring.restapi一些无用的DEBUG信息-->
+        <logger name="simm.spring.restapi" level="INFO"></logger>
+        <Root level="INFO">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFileDebug"/>
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileWarn"/>
+            <appender-ref ref="RollingFileError"/>
+            <appender-ref ref="RollingFileFatal"/>
+        </Root>
+        <!--记录druid-sql的记录-->        
+        <logger name="druid.sql.Statement" level="debug" additivity="false">            
+        	<appender-ref ref="druidSqlRollingFile"/>
+        </logger>
+        <logger name="druid.sql.Statement" level="debug" additivity="false">            
+        	<appender-ref ref="druidSqlRollingFile"/>        
+        </logger>
+        
+        <!--log4j2 自带过滤日志-->        
+        <Logger name="org.apache.catalina.startup.DigesterFactory" level="error" />
+        <Logger name="org.apache.catalina.util.LifecycleBase" level="error" />  
+        <Logger name="org.apache.coyote.http11.Http11NioProtocol" level="warn" />   
+        <logger name="org.apache.sshd.common.util.SecurityUtils" level="warn"/>    
+        <Logger name="org.apache.tomcat.util.net.NioSelectorPool" level="warn" />     
+        <Logger name="org.crsh.plugin" level="warn" />
+        <logger name="org.crsh.ssh" level="warn"/>
+        <Logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="error" />  
+        <Logger name="org.hibernate.validator.internal.util.Version" level="warn" />
+        <logger name="org.springframework.boot.actuate.autoconfigure.CrshAutoConfiguration" level="warn"/>   
+        <logger name="org.springframework.boot.actuate.endpoint.jmx" level="warn"/>
+        <logger name="org.thymeleaf" level="warn"/>
+    </Loggers>
+</Configuration>

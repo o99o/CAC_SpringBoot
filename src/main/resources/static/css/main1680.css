@@ -1,0 +1,187 @@
+.top-left{
+		width:15px;
+  		height:15px;
+	 	border-left:3px solid #1BD9FF;
+  		border-top:3px solid #1BD9FF;
+  		position:absolute;
+  		left:-2px;
+  		top:-2px;
+  		z-index:100;
+	}
+.top-right{
+		width:15px;
+	 	height:15px;
+	  	border-right:3px solid #1BD9FF;
+	  	border-top:3px solid #1BD9FF;
+	  	position:absolute;
+	  	right:-2px;
+	  	top:-2px;
+	  	z-index:100;
+}
+.bottom-left{
+		width:15px;
+ 		height:15px;
+  		border-left:3px solid #1BD9FF;
+  		border-bottom:3px solid #1BD9FF;
+  		position:absolute;
+  		left:-2px;
+  		bottom:-2px;
+  		z-index:100;
+}
+.bottom-right{
+  		width:15px;
+ 	 	height:15px;
+  		border-right:3px solid #1BD9FF;
+  		border-bottom:3px solid #1BD9FF;
+  		position:absolute;
+  		right:-2px;
+  		bottom:-2px;
+  		z-index:100;
+}
+.realPassRecord{
+		width:100%;
+		height:34px;
+		background-color:#134F74;
+	/*	opacity:0.76;*/
+}
+.realPassRecord_icon{
+	width:29px;
+	height:26px;
+	margin-left:6.5px;
+}
+.realPassRecord_icon img {
+	width:29px;
+	height:20px;
+	margin-top:6.5px;
+}
+.realPassRecord_title{
+	width:170px;
+	height:26px;
+	margin-left:41px;
+	margin-top:-22px;
+	position:absolute;
+}
+.realPassRecord_title span{
+	font-size:18px;
+	font-family:微软雅黑;
+	font-weight:bold;
+	color:#1BD9FF;
+}
+.realPassRecord_Num{
+	width:49px;
+	height:30px;
+	margin-left:286px;
+	margin-top:-23px;
+	position:absolute;
+}
+.realPassRecord_Num span{
+		font-size:32px;
+		font-weight:bold;
+		color:#1BD9FF;
+		position:absolute;
+		margin-top:-5px;
+		font-family:创艺简老宋;
+}
+.realPassRecord_location{
+		width:340px;
+		height:942px;
+		margin-top:2px;
+		overflow:hidden;
+	}
+#realPassRecord_Catalogue{
+	width:340px;
+	height:26px;
+	margin-top:0px;
+}
+.items_vehicleNum{
+	float:left;
+	background-color:#134F74;
+	margin-right:2px;
+	font-weight:bold;
+	width:38%;
+	height:100%;
+	text-align:center;
+	color:#1BD9FF;
+	font-size:14px;
+	line-height:25px;
+}
+.items_sectionInfo{
+		float:left;
+		background-color:#134F74;
+		font-weight:bold;
+		width:61%;
+		height:100%;
+		text-align:center;
+		color:#1BD9FF;
+		font-size:14px;
+		line-height:25px;
+	}
+.passRecordSliderDetial{
+	width:340px;
+	height:26px;
+	margin-top:5px;
+	cursor:pointer;
+}
+.content_vehicleNum{
+		float:left;
+		margin-top:5px;
+		font-weight:bold;
+		width:38%;
+		height:100%;
+		text-align:center;
+		color:#1BD9FF;
+		font-size:14px;
+		line-height:25px;
+	}
+.content_sectionInfo{
+		float:left;
+		margin-top:5px;
+		font-weight:bold;
+		width:61%;
+		height:100%;
+		text-align:center;
+		color:#1BD9FF;
+		font-size:14px;
+		line-height:25px;
+	}
+.singlePointUlCommon{
+	width:183px;
+	height:34px;
+	overflow:hidden;
+	margin-top:108px;
+}
+.singlePointLiCommon{
+	float:left;
+	background-color:#134F74;
+	margin-top:2px;
+	font-weight:bold;
+	width:100%;
+	height:32px;
+	text-align:center;
+	color:#1BD9FF;
+	font-size:14px;
+	line-height:25px;
+	opacity:0.8;
+	margin-left:-6px;
+	
+}
+.errorVehiclePlate{
+	width:340px;
+	height:240px;
+	overflow:hidden;
+}
+.errorVehiclePlateLi{
+		float:left;
+		font-weight:bold;
+		width:98%;
+		height:33%;
+		text-align:center;
+		color:#ffdb35;
+		line-height:25px;
+	}
+.errorPlateDiv{
+	width:64%;
+	font-size:22px;
+	margin-top:24px;
+	margin-left:70px;
+}
