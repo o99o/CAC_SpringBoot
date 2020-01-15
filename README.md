@@ -9,3 +9,7 @@
 * 3.实现基于角色的权限配置：用户管理、角色管理、菜单管理；
 * 4.使用自定义标签privilege.tld实现按钮级别的权限控制；
 * 5.集成第三方框架：jedis、kafka.
+
+### 三、页面展示
+* 1.登录页面
+<img src="https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/1.login.png" />
