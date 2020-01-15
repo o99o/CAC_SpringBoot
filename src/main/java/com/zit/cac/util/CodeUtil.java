@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15上午09:17:35
  *@version:
  *@description：

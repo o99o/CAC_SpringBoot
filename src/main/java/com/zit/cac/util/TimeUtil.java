@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-4上午09:52:14
  *@version:
  *@description：

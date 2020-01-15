@@ -7,7 +7,7 @@ import com.zit.cac.entity.Menu;
 
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18下午04:32:47
  *@version:
  *@description：

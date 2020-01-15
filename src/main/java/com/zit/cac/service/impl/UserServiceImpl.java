@@ -11,7 +11,7 @@ import com.zit.cac.dao.UserDao;
 import com.zit.cac.service.UserService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18上午10:53:16
  *@version:
  *@description：

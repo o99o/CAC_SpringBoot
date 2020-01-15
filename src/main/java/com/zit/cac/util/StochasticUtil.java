@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.UUID;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15上午09:50:03
  *@version:
  *@description：生成随机数字/字符串/uuid等工具

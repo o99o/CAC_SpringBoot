@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18上午11:46:02
  *@version:
  *@description：

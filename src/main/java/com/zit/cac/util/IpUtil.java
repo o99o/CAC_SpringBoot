@@ -3,7 +3,7 @@ package com.zit.cac.util;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15下午12:58:20
  *@version:
  *@description：

@@ -25,7 +25,7 @@ import com.zit.cac.util.Jackson2Util;
 import com.zit.cac.util.PropertiesUtil;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-3上午08:51:00
  *@version:
  *@description：

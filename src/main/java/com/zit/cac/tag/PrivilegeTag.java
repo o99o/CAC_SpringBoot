@@ -8,7 +8,7 @@ import javax.servlet.jsp.tagext.TagSupport;
 import com.zit.cac.util.StringUtil;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-5下午04:47:18
  *@version:
  *@description：

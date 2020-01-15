@@ -1,6 +1,6 @@
 package com.zit.cac.entity;
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18上午10:15:10
  *@version:
  *@description：easyui翻页时需要

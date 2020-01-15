@@ -3,7 +3,7 @@ package com.zit.cac.entity;
 import java.io.Serializable;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-6下午05:17:43
  *@version: 
  *@description：操作按钮所拥有的属性

@@ -10,7 +10,7 @@ import com.zit.cac.dao.TokenDao;
 import com.zit.cac.service.TokenService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15上午09:03:56
  *@version:
  *@description：

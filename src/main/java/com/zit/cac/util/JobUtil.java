@@ -19,7 +19,7 @@ import com.zit.cac.service.AttachmentService;
 import com.zit.cac.service.LogService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-13上午11:02:07
  *@version:
  *@description： 定时器

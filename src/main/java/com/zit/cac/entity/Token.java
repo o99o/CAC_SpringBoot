@@ -1,6 +1,6 @@
 package com.zit.cac.entity;
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15上午08:57:46
  *@version:
  *@description：

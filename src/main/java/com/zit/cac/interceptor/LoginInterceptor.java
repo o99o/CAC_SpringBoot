@@ -26,7 +26,7 @@ import com.zit.cac.util.MagicValue;
 import com.zit.cac.util.TimeUtil;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15下午12:39:50
  *@version:
  *@description：登录拦截器

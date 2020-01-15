@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-19下午03:09:30
  *@version:
  *@description：邮箱验证注册

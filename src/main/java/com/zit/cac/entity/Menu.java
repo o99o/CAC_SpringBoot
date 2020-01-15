@@ -3,7 +3,7 @@ package com.zit.cac.entity;
 import java.io.Serializable;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18下午04:19:15
  *@version:
  *@description：

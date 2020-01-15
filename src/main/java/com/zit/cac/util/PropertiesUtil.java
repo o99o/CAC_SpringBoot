@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-14下午01:51:16
  *@version:
  *@description：

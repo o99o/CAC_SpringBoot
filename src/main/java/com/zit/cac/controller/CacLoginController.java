@@ -39,7 +39,7 @@ import com.zit.cac.util.TimeUtil;
 import com.zit.cac.util.WriterUtil;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18下午04:27:10
  *@version:
  *@description：

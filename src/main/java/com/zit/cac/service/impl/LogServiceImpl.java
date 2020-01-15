@@ -10,7 +10,7 @@ import com.zit.cac.dao.LogDao;
 import com.zit.cac.service.LogService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-1下午03:22:48
  *@version:
  *@description：

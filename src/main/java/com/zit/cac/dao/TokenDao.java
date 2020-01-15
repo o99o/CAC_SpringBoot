@@ -3,7 +3,7 @@ package com.zit.cac.dao;
 import java.util.Map;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-15上午09:02:53
  *@version:
  *@description：

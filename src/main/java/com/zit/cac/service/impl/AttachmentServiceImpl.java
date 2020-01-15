@@ -10,7 +10,7 @@ import com.zit.cac.dao.AttachmentDao;
 import com.zit.cac.service.AttachmentService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-11上午10:06:31
  *@version:
  *@description：

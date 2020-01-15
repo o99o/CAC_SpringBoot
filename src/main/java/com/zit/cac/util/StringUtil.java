@@ -3,7 +3,7 @@ package com.zit.cac.util;
 
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18上午10:59:25
  *@version:
  *@description：

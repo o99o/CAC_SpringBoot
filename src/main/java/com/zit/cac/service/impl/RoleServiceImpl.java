@@ -11,7 +11,7 @@ import com.zit.cac.dao.RoleDao;
 import com.zit.cac.service.RoleService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18下午04:57:50
  *@version:
  *@description：

@@ -12,7 +12,7 @@ import com.zit.cac.entity.Menu;
 import com.zit.cac.service.MenuService;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-5-18下午04:33:08
  *@version:
  *@description：

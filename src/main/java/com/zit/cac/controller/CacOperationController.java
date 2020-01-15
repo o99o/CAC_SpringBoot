@@ -23,7 +23,7 @@ import com.zit.cac.util.Jackson2Util;
 import com.zit.cac.util.StringUtil;
 
 /**
- *@author: wangq
+ *@author: o99o
  *@date: 2015-8-7下午04:06:10
  *@version:
  *@description：
