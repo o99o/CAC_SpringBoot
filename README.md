@@ -12,13 +12,12 @@
 
 ### 三、页面展示
 * 1.登录
-<img src="/o99o/CAC_SpringBoot/blob/master/src/main/resources/static/readme/1.login.png?raw=true"></img>
-![image](https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/1.login.png)
+<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/1.login.png"></img>
 * 2.用户
-![image](https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/2.user.png)
+<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/2.user.png"></img>
 * 3.角色
-![image](https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/3.role.png)
+<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/3.role.png"></img>
 * 4.菜单
-![image](https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/4.menu.png)
+<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/4.menu.png"></img>
 * 5.日志
-![image](https://github.com/o99o/CAC_SpringBoot/tree/master/src/main/resources/static/readme/5.log.png)
+<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme//5.log.png"></img>
