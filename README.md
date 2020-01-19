@@ -12,13 +12,11 @@
 * 6.集成第三方框架：jedis、kafka.
 
 ### 三、页面展示
-* 1.登录
-<img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/1.login.png"></img>
-* 2.用户
+* 1.用户
 <img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/2.user.png"></img>
-* 3.角色
+* 2.角色
 <img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/3.role.png"></img>
-* 4.菜单
+* 3.菜单
 <img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme/4.menu.png"></img>
-* 5.日志
+* 4.日志
 <img src="https://raw.githubusercontent.com/o99o/CAC_SpringBoot/master/src/main/resources/static/readme//5.log.png"></img>
