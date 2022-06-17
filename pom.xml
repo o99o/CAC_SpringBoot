@@ -28,7 +28,7 @@
 		<!-- jstl -->
 		<jstl.version>1.2</jstl.version>
 		<!-- fastjson -->
-		<fastjson.version>1.2.31</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<!-- commons-fileupload -->
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<!-- commons-io -->
